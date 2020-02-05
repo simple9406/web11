@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-02-05 02:27:23
+/* Smarty version 3.1.34-dev-7, created on 2020-02-05 09:16:52
   from 'C:\xampp\htdocs\web11\templates\theme.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5e3a19fbccdcf4_65504769',
+  'unifunc' => 'content_5e3a79f4b8eae9_83768156',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b397f248e59d291c4e6969c11b6363745a5a00e5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\web11\\templates\\theme.tpl',
-      1 => 1580437477,
+      1 => 1580886511,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5e3a19fbccdcf4_65504769 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5e3a79f4b8eae9_83768156 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -74,6 +74,20 @@ css/creative.min.css" rel="stylesheet">
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
           </li>
+          <?php if ($_SESSION['admin']) {?>
+                      <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="user.php">管理員</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="user.php?op=logout">登出</a>
+            </li>
+          <?php } else { ?>
+                      <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="user.php">登入</a>
+            </li>
+            
+          <?php }?>
+          
         </ul>
       </div>
     </div>
